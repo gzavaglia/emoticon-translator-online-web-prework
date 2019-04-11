@@ -24,7 +24,7 @@ def get_japanese_emoticon(load_address, emoticon)
     keyx = all_emo.keys 
     if eng == emoticon
       return jap
-    elsif keyx.include?(emoticon) = false
+    elsif keyx.include?(emoticon) == false
     return "Sorry, emoticon was not found"
     end 
   end 

@@ -34,7 +34,7 @@ def get_english_meaning(load_address, emoticon)
   emo_hash = load_library(load_address)
   binding.pry 
   meaning_hash = emo_hash['get_meaning']
-  meaning_hash.each do |meaning, jap|
+  meaning_hash.each do |jap, meaning|
     ponja = meaning_hash.values
     if jap == emoticon
       return meaning

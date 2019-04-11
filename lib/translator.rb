@@ -23,7 +23,6 @@ def get_japanese_emoticon(load_address, emoticon)
   all_emo.each do |eng, jap|
     if eng == emoticon
       return jap
-    elsif eng
     end 
   end 
 end

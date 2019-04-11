@@ -21,8 +21,11 @@ def get_japanese_emoticon(load_address, emoticon)
   emo_hash = load_library(load_address)
   all_emo = emo_hash['get_emoticon']
   all_emo.each do |eng, jap|
+    keyx = all_emo.keys 
     if eng == emoticon
       return jap
+    elsif keyx.include?(emoticon) = false
+    return "S"
     end 
   end 
 end

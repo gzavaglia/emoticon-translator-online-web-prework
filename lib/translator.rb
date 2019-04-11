@@ -30,6 +30,15 @@ def get_japanese_emoticon(load_address, emoticon)
   end 
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(load_address, emoticon)
+  emo_hash = load_library(load_address)
+  meaning_hash = emo_hash['get_meaning']
+  meaning_hash.each do |meaning, jap|
+    ponja = meaning.values
+    if jap == emoticon
+      return meaning
+    elsif ponja.include?(emoticon) == false
+      return "Sorry, that emoticon was not found"
+    end #end if 
+  end #end do
 end
